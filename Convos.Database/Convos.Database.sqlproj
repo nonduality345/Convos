@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>Convos.Database</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{494a0a93-7c15-45f4-aa03-7300c26a95cf}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql100DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>Convos.Database</RootNamespace>
+    <AssemblyName>Convos.Database</AssemblyName>
+    <ModelCollation>1033, CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="Tables" />
+    <Folder Include="Stored Procedures" />
+    <Folder Include="User Defined Types" />
+    <Folder Include="Views" />
+    <Folder Include="Functions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="Tables\Message.sql" />
+    <Build Include="Tables\User.sql" />
+    <Build Include="Stored Procedures\usp_ConvoEntity_GetAll.sql" />
+    <Build Include="User Defined Types\IdTable.sql" />
+    <Build Include="Stored Procedures\usp_ConvoEntity_GetById.sql" />
+    <Build Include="Stored Procedures\usp_ConvoEntity_Insert.sql" />
+    <Build Include="Stored Procedures\usp_ConvoEntity_Patch.sql" />
+    <Build Include="Stored Procedures\usp_ConvoEntity_Delete.sql" />
+    <Build Include="Tables\Convo.sql" />
+    <Build Include="Views\vw_Convo.sql" />
+    <Build Include="Views\vw_Message.sql" />
+    <Build Include="Stored Procedures\usp_MessageEntity_Delete.sql" />
+    <Build Include="Stored Procedures\usp_MessageEntity_GetAll.sql" />
+    <Build Include="Stored Procedures\usp_MessageEntity_GetByIds.sql" />
+    <Build Include="Stored Procedures\usp_MessageEntity_Insert.sql" />
+    <Build Include="Stored Procedures\usp_MessageEntity_Patch.sql" />
+    <Build Include="Functions\udf_CheckConvo.sql" />
+    <Build Include="Functions\udf_CheckConvoCreator.sql" />
+    <Build Include="Functions\udf_CheckUser.sql" />
+    <Build Include="Functions\udf_CheckConvoCreatorOrParticipant.sql" />
+    <Build Include="Functions\udf_CheckMessage.sql" />
+    <Build Include="Functions\udf_CheckMessageSender.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="Convos.Database.refactorlog" />
+  </ItemGroup>
+</Project>

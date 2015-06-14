@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="1f37ccdc-7c6b-4458-9210-6b30afae8463" ChangeDateTime="06/09/2015 01:30:21">
+    <Property Name="ElementName" Value="[dbo].[User].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[User]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="user_id" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="3441b943-0b71-485b-a3f2-fb6bc538b990" ChangeDateTime="06/09/2015 01:31:13">
+    <Property Name="ElementName" Value="[dbo].[Convo].[Root]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Convo]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Thread" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="3085b4a8-41ce-4fae-94d7-d7a021ed1e41" ChangeDateTime="06/09/2015 01:37:21">
+    <Property Name="ElementName" Value="[dbo].[Convo].[Thread]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Convo]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Parent" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="598df8f2-68b6-4449-916e-0b44cf3a3414" ChangeDateTime="06/09/2015 13:25:32">
+    <Property Name="ElementName" Value="[dbo].[Message].[Updated]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Message]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="DateRead" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="2c286f67-92ab-42c3-947e-b08cca40bd82" ChangeDateTime="06/09/2015 13:25:38">
+    <Property Name="ElementName" Value="[dbo].[Message].[Created]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Message]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="DateCreated" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="72d4a4b5-5d5d-44b9-a2a1-9c71a8abab5b" ChangeDateTime="06/09/2015 13:25:42">
+    <Property Name="ElementName" Value="[dbo].[Message].[Deleted]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Message]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="DateDeleted" />
+  </Operation>
+</Operations>

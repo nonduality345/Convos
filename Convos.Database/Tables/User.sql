@@ -1,0 +1,7 @@
+﻿CREATE TABLE [dbo].[User]
+(
+	[user_id] BIGINT IDENTITY(1, 1) NOT NULL, 
+    [FirstName] NVARCHAR(100) NOT NULL, 
+    [LastName] NVARCHAR(100) NOT NULL,
+	CONSTRAINT [PK_User] PRIMARY KEY CLUSTERED ([user_id] ASC)
+)
